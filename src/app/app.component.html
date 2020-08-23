@@ -1,7 +1,10 @@
 <h1>My form</h1>
 
 <div>
-  <app-post-form></app-post-form>
+  <app-post-form
+  (postAdd)="updatePosts($event)"
+  >
+  </app-post-form>
   <br>
   <hr>
   <br>

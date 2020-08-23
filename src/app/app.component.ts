@@ -17,4 +17,7 @@ export class AppComponent {
     { title: 'First post', text: 'First text'},
     { title: 'Second post', text: 'Second text'}
   ];
+  updatePosts(post: Post): void {
+    this.myPosts.unshift(post);
+  }
 }
