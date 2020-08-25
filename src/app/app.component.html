@@ -10,6 +10,10 @@
   <br>
   <app-post
     *ngFor="let post of myPosts"
-    [post] = post
-  ></app-post>
+    [post] = post>
+    <p *ngIf="post.text.length > 10; else otherShortP">Пост длинный</p>
+    <ng-template #otherShortP>
+    <p>Пост короткий</p>
+    </ng-template>
+  </app-post>
 </div>

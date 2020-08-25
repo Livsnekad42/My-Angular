@@ -1,9 +1,10 @@
 <div>
   <label>
-  <input type="text" placeholder="Title" [(ngModel)]="title">
+  <input type="text" placeholder="Title" [(ngModel)]="title" #inputField>
   </label>
   <label>
   <input type="text" placeholder="Text" [(ngModel)]="text">
   </label>
   <button (click)="addPost()">Add posts</button>
+  <button (click)="setGreen()"></button>
 </div>

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 import {Post} from '../app.component';
 
 @Component({
@@ -9,6 +9,7 @@ import {Post} from '../app.component';
 export class PostFormComponent {
 
   @Output() postAdd: EventEmitter<Post> = new EventEmitter<Post>();
+  @ViewChild('inputField') myInput: ElementRef;
 
   title: '';
   text: '';
@@ -23,6 +24,9 @@ export class PostFormComponent {
       this.title = '';
       this.text = '';
     }
+  }
+  setGreen(): void {
+    this.myInput.nativeElement.style.borderColor = 'red';
   }
 
 }
