@@ -1,4 +1,10 @@
 <h1>My form</h1>
+<input
+  type="text" [(ngModel)]="search">
+<button (click)="searchField = 'title'">
+  title
+</button>
+<button (click)="searchField = 'text'">text</button>
 
 <div>
   <app-post-form
@@ -9,7 +15,7 @@
   <hr>
   <br>
   <app-post
-    *ngFor="let post of myPosts"
+    *ngFor="let post of myPosts | filter:search:searchField"
     [post] = post>
     <p *ngIf="post.text.length > 10; else otherShortP">Пост длинный</p>
     <ng-template #otherShortP>

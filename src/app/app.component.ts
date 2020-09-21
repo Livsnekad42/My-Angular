@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 export interface Post {
   title: string;
@@ -13,6 +13,8 @@ export interface Post {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  search = '';
+  searchField = '';
   myPosts: Post[] = [
     { title: 'First post', text: 'First text'},
     { title: 'Second post', text: 'Second text'}
